@@ -1,0 +1,286 @@
+\documentclass[10pt,a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage[
+    top=0.30in,
+    bottom=0.30in,
+    left=0.50in,
+    right=0.50in
+]{geometry}
+
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{relsize}
+
+% ---------- Personal Info ----------
+\newcommand{\name}{Himanshu}
+\newcommand{\course}{Master of Computer Applications}
+\newcommand{\roll}{24MCF1R16}
+\newcommand{\phone}{7390809657}
+\newcommand{\emaila}{himanshu620434@gmail.com}
+\newcommand{\emailb}{hh24mcf1r16@student.nitw.ac.in}
+
+% ---------- Formatting ----------
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=black,
+    linkcolor=black
+}
+
+% ---------- Section Formatting ----------
+\titleformat{\section}
+  {\large\bfseries}
+  {}
+  {0em}
+  {}
+  [\vspace{-5pt}\rule{\textwidth}{0.4pt}]
+
+\titlespacing*{\section}{0pt}{4pt}{2pt}
+
+% ---------- List Formatting ----------
+\setlist[itemize]{
+    leftmargin=1.25em,
+    itemsep=0.5pt,
+    topsep=0.5pt,
+    parsep=0pt,
+    partopsep=0pt
+}
+
+% ---------- Resume Commands ----------
+\newcommand{\resumeItem}[1]{
+    \item \textrelsize{+0.5} #1
+}
+
+\newcommand{\resumeSubheading}[4]{
+    \vspace{1pt}
+    \textbf{#1} \hfill \textbf{#2}\\
+    \textit{\small #3} \hfill \textit{\small #4}
+    \vspace{1pt}
+}
+
+% =========================================================
+% DOCUMENT
+% =========================================================
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+% =========================================================
+% NIT WARANGAL CAMPUS HEADER
+% =========================================================
+
+\noindent
+\begin{minipage}[t]{2.35cm}
+    \vspace{0pt}
+    \includegraphics[width=1.9cm,clip]{NITW_LOGO.png}
+\end{minipage}
+\hspace{0.15cm}
+\begin{minipage}[t]{\dimexpr\linewidth-2.55cm\relax}
+    \vspace{0pt}
+
+    \begin{tabularx}{\linewidth}{@{}X r@{}}
+
+        \textbf{\Large \name}
+        &
+        {\raisebox{0.0\height}{\footnotesize \faPhone}\ +91-\phone}
+        \\[-0.5mm]
+
+        {Roll No.: \roll}
+        &
+        \href{mailto:\emaila}{
+            \raisebox{0.0\height}{\footnotesize \faEnvelope}\ \emaila
+        }
+        \\[-0.5mm]
+
+        \course
+        &
+        \href{mailto:\emailb}{
+            \raisebox{0.0\height}{\footnotesize \faEnvelope}\ \emailb
+        }
+        \\[-0.5mm]
+
+        {(MCA)}
+        &
+        \href{https://github.com/devbyhimans}{
+            \raisebox{0.0\height}{\footnotesize \faGithub}\ devbyhimans
+        }
+        \\[-0.5mm]
+
+        {National Institute Of Technology, Warangal}
+        &
+        \href{https://www.linkedin.com/in/himanshu-chaudhary-71a4a1372/}{
+            \raisebox{0.0\height}{\footnotesize \faLinkedin}\ LinkedIn Profile
+        }
+
+    \end{tabularx}
+\end{minipage}
+
+\vspace{1.5mm}
+
+% =========================================================
+% EDUCATION
+% =========================================================
+
+\section{Education}
+
+\resumeSubheading
+{National Institute Of Technology, Warangal}
+{2024 -- 2027}
+{Master of Computer Applications (MCA)}
+{CGPA: 8.59}
+
+\resumeSubheading
+{National P.G. College, Uttar Pradesh}
+{2023}
+{Bachelor of Science (Mathematics)}
+{CGPA: 7.8}
+
+\resumeSubheading
+{Spring Dale College, Uttar Pradesh}
+{2019 -- 2020}
+{Senior Secondary (Class XII)}
+{Percentage: 88.6\%}
+
+% =========================================================
+% EXPERIENCE
+% =========================================================
+
+\section{Experience}
+
+\resumeSubheading
+{Research Intern -- Prof. Anusha Vangala}
+{May 2026 -- Jun 2026}
+{Dept. of Computer Science \& Engineering, NIT Warangal}
+{Warangal, India}
+
+\begin{itemize}
+    \resumeItem{Built the \textbf{data generation pipeline} used to train a \textbf{digital twin model} of a 3D printer under Prof. Anusha Vangala.}
+\end{itemize}
+
+\resumeSubheading
+{Open Source Contributor -- GirlScript Summer of Code (GSSoC)}
+{May 2026 -- Jun 2026}
+{Draftdeckai -- open-source AI document creation platform}
+{Remote}
+
+\begin{itemize}
+    \resumeItem{Resolved \textbf{UI and security bugs} in \textbf{Draftdeckai} as part of \textbf{GSSoC 2026}.}
+\end{itemize}
+
+% =========================================================
+% PROJECTS
+% =========================================================
+
+\section{Projects}
+
+% ---------- PROJECT 1 ----------
+
+\resumeSubheading
+{Syncra -- Multi-Tenant Project Management Platform \normalfont\small $|$ \href{https://syncra-workflow.vercel.app/}{\faExternalLink\ \textbf{Live}}}
+{}
+{}
+{}
+
+\vspace{-4pt}
+{\small
+\textit{\textbf{Tech Stack:}
+\textbf{React, Redux Toolkit, Node.js, Express.js, Prisma ORM, PostgreSQL (Neon), Clerk, Inngest, Cloudinary, Docker}}
+}
+
+\begin{itemize}
+
+    \resumeItem{Designed \textbf{multi-tenant workspace isolation} by syncing \textbf{Clerk Organizations} to \textbf{PostgreSQL} through webhook handlers with \textbf{idempotent database operations} to safely handle repeated event deliveries.}
+
+    \resumeItem{Built API-level \textbf{Role-Based Access Control (RBAC)} where workspace admins manage projects, project team leads create or delete tasks, and regular members are restricted to updating task status.}
+
+    \resumeItem{Handled the asynchronous \textbf{Clerk-to-PostgreSQL synchronization delay} using bounded polling with \textbf{3-second retries}, displaying a ``Setting up your workspace'' state until workspace data became available.}
+
+    \resumeItem{Set up \textbf{Inngest background jobs} for task-assignment and deadline-reminder emails, re-checking the latest task status before sending reminders to prevent \textbf{stale notifications}.}
+
+\end{itemize}
+
+% ---------- PROJECT 2 ----------
+
+\resumeSubheading
+{ColdTrace AI -- Cold-Chain Incident Control Platform}
+{}
+{}
+{}
+
+\vspace{-4pt}
+{\small
+\textit{\textbf{Tech Stack:}
+\textbf{Python, LangGraph, LangChain, Streamlit, MS SQL Server, Pinecone, DeepSeek/OpenAI, Docker, SQLAlchemy}}
+}
+
+\begin{itemize}
+
+    \resumeItem{Built an \textbf{AI agent using LangGraph} that loops between a reasoning step and a tool execution step, allowing it to query a \textbf{live SQL database}, fetch \textbf{real-time weather data} from an external API, and search \textbf{company SOPs stored in Pinecone} before forming a final answer.}
+
+    \resumeItem{Created a dedicated \textbf{read-only SQL user} for the AI agent and used SQL \texttt{GRANT}/\texttt{DENY} statements to give it access only to a clean \textbf{semantic view}, blocking it from ever touching the raw data table or running any write operations.}
+
+    \resumeItem{Built the \textbf{SOP document ingestion pipeline} to compute an \textbf{MD5 hash} of each file before uploading it to Pinecone, so re-running the script only processes files that have actually changed and skips everything already indexed.}
+
+    \resumeItem{Logged every \textbf{tool call and AI response} into a dedicated SQL audit table during each conversation, and built a \textbf{separate admin panel} in the Streamlit UI where admins can authenticate and view the full execution history.}
+
+\end{itemize}
+
+% =========================================================
+% TECHNICAL SKILLS
+% =========================================================
+
+\section{Technical Skills}
+
+\small
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}l X@{}}
+
+Languages &
+\textbf{C++, JavaScript/TypeScript, Python, SQL, HTML, CSS}
+\\[-0.5mm]
+
+Frontend &
+\textbf{ReactJS, Redux Toolkit, Tailwind CSS}
+\\[-0.5mm]
+
+Backend &
+\textbf{Node.js, Express.js, FastAPI, REST APIs}
+\\[-0.5mm]
+
+Database \& ORM &
+\textbf{PostgreSQL, MongoDB, Prisma ORM, Mongoose}
+\\[-0.5mm]
+
+Authentication \& APIs &
+\textbf{JWT, bcrypt, REST APIs}
+\\[-0.5mm]
+
+Real-Time \& Communication &
+\textbf{WebRTC, Socket.io, Stream Chat SDK, Stream Video SDK}
+\\[-0.5mm]
+
+Tools \& DevOps &
+\textbf{Git, GitHub, Docker, Postman, Cloudinary, Inngest}
+\\[-0.5mm]
+
+Coursework &
+\textbf{OOPs, DBMS, DSA, Computer Networking, Operating Systems}
+\\[-0.5mm]
+
+Areas of Interest &
+\textbf{Web Development, Cloud Infrastructure, Artificial Intelligence, Machine Learning}
+
+\end{tabularx}
+
+\end{document}
